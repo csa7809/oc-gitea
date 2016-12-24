@@ -10,4 +10,6 @@ COPY . /app/gitea
 
 RUN chmod +x /app/gitea/assemble /app/gitea/run && /app/gitea/assemble
 
+USER 1000
+
 CMD ["/app/gitea/run"]
