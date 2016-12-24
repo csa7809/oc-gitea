@@ -4,10 +4,10 @@
 # but to be in root group add no privilege
 
 echo CUSTOM ASSEMBLE, chgrp root, chmod go+w
-if [ -d "/data"] ; then
+if [ -d "/data" ] ; then
    usermod -a -G root git
    chown -R :root /data
    chmod -R g+w /data
 fi
-ech end CUSTOM ASSEMBLE
+echo end CUSTOM ASSEMBLE
 
