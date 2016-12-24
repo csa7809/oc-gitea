@@ -4,10 +4,10 @@ MAINTAINER claude SANSOUCY <c.sansoucy@gmail.com>
 
 # Disabling SSH in gitea (only start gitea, not openssh nor syslog)
 
-COPY . .
-
 EXPOSE 3000
 
-RUN chmod +x assemble run && ./assemble
+COPY . /app/gitea
 
-CMD ["run"]
+RUN chmod +x /app/gitea/assemble /app/gitea/run && /app/gitea/assemble
+
+CMD ["/app/gitea/run"]
