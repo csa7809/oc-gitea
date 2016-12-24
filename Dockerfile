@@ -1,4 +1,4 @@
-FROM go-gitea/gitea
+FROM gitea/gitea:latest
 
 MAINTAINER claude SANSOUCY <c.sansoucy@gmail.com>
 
