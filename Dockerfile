@@ -8,3 +8,6 @@ COPY ./.s2i/bin/ /usr/libexec/s2i
 
 EXPOSE 3000
 
+RUN /usr/libexec/s2i/assemble
+
+CMD ["run"]
