@@ -1,8 +1,6 @@
-#! /bin/sh
+#!/bin/sh
 
 echo S2I CUSTOM run
-
-#!/bin/bash
 
 if [ ! -d /data/git/.ssh ]; then
     mkdir -p /data/git/.ssh
