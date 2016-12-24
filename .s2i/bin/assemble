@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# openshift, running user is member of root group
+# but to be in root group add no privilege
+
+echo CUSTOM ASSEMBLE, chgrp root, chmod go+w
+if [ -d "/data"] ; then
+   usermod -a -G root git
+   chown -R :root /data
+   chmod -R g+w /data
+fi
+ech end CUSTOM ASSEMBLE
+
