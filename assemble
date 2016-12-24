@@ -5,7 +5,7 @@
 
 echo CUSTOM ASSEMBLE, chgrp root, chmod go+w
 if [ -d "/data" ] ; then
-   usermod -a -G root git
+   addgroup git root
    chown -R :root /data
    chmod -R g+w /data
 fi
